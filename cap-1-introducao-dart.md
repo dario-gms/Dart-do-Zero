@@ -35,7 +35,7 @@
 
 ## O que é Dart
 
-Dart é uma linguagem de programação moderna, criada pelo Google, projetada para ser fácil de aprender e poderosa o suficiente para criar aplicações complexas. Pense em Dart como uma ferramenta versátil — assim como um canivete suíço pode cortar, abrir latas e apertar parafusos, Dart pode criar aplicativos móveis, sites, servidores e programas de linha de comando.
+Dart é uma linguagem de programação moderna, criada pelo Google, projetada para ser fácil de aprender e poderosa o suficiente para criar aplicações complexas. Pense em Dart como uma ferramenta versátil, assim como um canivete suíço pode cortar, abrir latas e apertar parafusos, Dart pode criar aplicativos móveis, sites, servidores e programas de linha de comando.
 
 ### Características Principais
 
@@ -151,7 +151,7 @@ void main() {
 **Explicação:**
 - `String nome = 'João'` cria uma variável de texto
 - `int idade = 25` cria uma variável de número inteiro
-- `$nome` e `$idade` são interpolações — inserem o valor da variável no texto
+- `$nome` e `$idade` são interpolações, inserem o valor da variável no texto
 
 **Experimente:** Mude os valores das variáveis e observe o resultado.
 
@@ -430,11 +430,11 @@ void main() {
 ## Resumo
 
 1. **Dart é uma linguagem moderna** criada pelo Google, ideal para iniciantes e profissionais
-2. **DartPad é seu melhor amigo** para aprender — use https://dartpad.dev
-3. **Todo programa Dart precisa de main()** — é o ponto de partida
+2. **DartPad é seu melhor amigo** para aprender: use https://dartpad.dev
+3. **Todo programa Dart precisa de main()** é o ponto de partida
 4. **Interpolação com $** facilita a criação de textos dinâmicos
 5. **Tipos básicos incluem** String, int, double, bool, List e Map
-6. **Dart serve para muito mais** que Flutter — web, servidor, scripts
+6. **Dart serve para muito mais** que Flutter: web, servidor, scripts
 7. **Practice makes perfect** — execute todos os exemplos no DartPad
 8. **Null-safety previne erros** comuns em outras linguagens
 9. **Sintaxe familiar** facilita a transição de outras linguagens
@@ -443,7 +443,7 @@ void main() {
 ## Glossário
 
 - **DartPad**: Editor online gratuito para escrever e executar código Dart
-- **SDK**: Software Development Kit — conjunto de ferramentas para desenvolvimento
+- **SDK**: Software Development Kit: conjunto de ferramentas para desenvolvimento
 - **main()**: Função principal onde o programa inicia sua execução
 - **String**: Tipo de dado para texto
 - **int**: Tipo de dado para números inteiros
