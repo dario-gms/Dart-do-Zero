@@ -1,0 +1,463 @@
+# Capítulo 1: O que é Dart, História Breve, Quando Usar, Instalação do SDK e Primeiro Hello World
+
+**Suposições do capítulo:** Este capítulo assume Dart 3.0+ para aproveitar os recursos de null-safety e sintaxe moderna. O leitor pode usar o DartPad (recomendado para iniciantes) ou instalar o Dart SDK localmente.
+
+## Objetivos do Capítulo
+
+1. Compreender o que é a linguagem Dart e suas principais características
+2. Conhecer a história e evolução da linguagem desde sua criação
+3. Identificar quando e onde usar Dart em projetos reais
+4. Aprender a usar o DartPad e instalar o Dart SDK no computador
+5. Escrever e executar seu primeiro programa "Hello World" em Dart
+6. Entender a estrutura básica de um programa Dart
+
+## Pré-requisitos
+
+- Conhecimento básico de como usar um navegador web
+- Acesso à internet para usar o DartPad (https://dartpad.dev)
+- (Opcional) Conhecimento básico de linha de comando para instalação local do SDK
+
+## Sumário
+
+1. [O que é Dart](#o-que-é-dart)
+2. [História Breve da Linguagem](#história-breve-da-linguagem)
+3. [Quando e Onde Usar Dart](#quando-e-onde-usar-dart)
+4. [DartPad: Seu Primeiro Ambiente](#dartpad-seu-primeiro-ambiente)
+5. [Instalação do Dart SDK](#instalação-do-dart-sdk)
+6. [Exemplos Práticos](#exemplos-práticos)
+7. [Boas Práticas e Advertências](#boas-práticas-e-advertências)
+8. [Casos de Uso Reais](#casos-de-uso-reais)
+9. [Exercícios Práticos](#exercícios-práticos)
+10. [Resumo](#resumo)
+11. [Glossário](#glossário)
+12. [Referências](#referências)
+13. [Próximos Passos](#próximos-passos)
+
+## O que é Dart
+
+Dart é uma linguagem de programação moderna, criada pelo Google, projetada para ser fácil de aprender e poderosa o suficiente para criar aplicações complexas. Pense em Dart como uma ferramenta versátil — assim como um canivete suíço pode cortar, abrir latas e apertar parafusos, Dart pode criar aplicativos móveis, sites, servidores e programas de linha de comando.
+
+### Características Principais
+
+- **Orientada a objetos**: Tudo em Dart é um objeto, facilitando a organização do código
+- **Null-safety**: Sistema que previne erros comuns relacionados a valores nulos
+- **Compilada e interpretada**: Pode rodar diretamente (modo desenvolvimento) ou ser compilada para máxima performance
+- **Sintaxe familiar**: Similar a Java, C# e JavaScript, facilitando a transição
+
+## História Breve da Linguagem
+
+Dart nasceu em 2011 dentro do Google, criada por uma equipe liderada por Lars Bak e Kasper Lund. A ideia inicial era resolver problemas do JavaScript no desenvolvimento web, mas a linguagem evoluiu muito além disso.
+
+**Marcos importantes:**
+- **2011**: Anúncio público do Dart
+- **2013**: Primeira versão estável (1.0)
+- **2018**: Dart 2.0 com sistema de tipos mais robusto
+- **2021**: Dart 2.12 introduz null-safety obrigatório
+- **2023**: Dart 3.0 com recursos avançados como records e patterns
+
+Hoje, Dart é mais conhecida como a linguagem por trás do Flutter, mas sua aplicação vai muito além do desenvolvimento mobile.
+
+## Quando e Onde Usar Dart
+
+### Use Dart quando você quer:
+- **Desenvolvimento mobile**: Flutter permite criar apps iOS e Android com uma única base de código
+- **Aplicações web**: Dart compila para JavaScript moderno e eficiente
+- **Servidores e APIs**: Excelente performance para backend
+- **Scripts e automação**: Ideal para tarefas automatizadas
+- **Prototipagem rápida**: Sintaxe simples acelera o desenvolvimento
+
+### Não use Dart para:
+- **Sistemas embarcados**: Ainda limitado neste nicho
+- **Inteligência artificial/Machine Learning**: Ecossistema menor comparado ao Python
+- **Jogos AAA**: Unity (C#) e Unreal (C++) dominam esse mercado
+
+## DartPad: Seu Primeiro Ambiente
+
+O DartPad é um editor online gratuito onde você pode escrever e executar código Dart sem instalar nada. É como um caderno digital para programação.
+
+**Para usar o DartPad:**
+1. Acesse https://dartpad.dev
+2. Escreva seu código na área à esquerda
+3. Clique em "Run" para executar
+4. Veja o resultado na área "Console" à direita
+
+## Instalação do Dart SDK
+
+### Windows
+1. Acesse https://dart.dev/get-dart
+2. Baixe o instalador para Windows
+3. Execute o instalador e siga as instruções
+4. Abra o Prompt de Comando e digite `dart --version` para verificar
+
+### macOS
+```bash
+brew install dart
+```
+Ou baixe o instalador do site oficial.
+
+### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install dart
+```
+
+### Verificação da Instalação
+Após instalar, execute no terminal:
+```bash
+dart --version
+```
+Você deve ver algo como: `Dart SDK version: 3.1.0`
+
+## Exemplos Práticos
+
+### Exemplo 1 — Primeiro Hello World Básico
+
+```dart
+void main() {
+  print('Hello, World!');
+}
+```
+
+**Arquivo sugerido:** `hello_world.dart`
+
+**DartPad:** Cole o código acima e clique em "Run"
+
+**Execução local:** `dart run hello_world.dart`
+
+**Explicação:** 
+- `void main()` é o ponto de entrada do programa — onde tudo começa
+- `print()` é uma função que exibe texto no console
+- Toda instrução em Dart termina com `;` (ponto e vírgula)
+
+**Experimente:** Troque "Hello, World!" por seu nome e execute novamente.
+
+### Exemplo 2 — Hello World com Variáveis
+
+```dart
+void main() {
+  String nome = 'João';
+  int idade = 25;
+  
+  print('Olá, meu nome é $nome e tenho $idade anos!');
+}
+```
+
+**Arquivo sugerido:** `hello_variaveis.dart`
+
+**DartPad:** Cole e clique em "Run"
+
+**Execução local:** `dart run hello_variaveis.dart`
+
+**Explicação:**
+- `String nome = 'João'` cria uma variável de texto
+- `int idade = 25` cria uma variável de número inteiro
+- `$nome` e `$idade` são interpolações — inserem o valor da variável no texto
+
+**Experimente:** Mude os valores das variáveis e observe o resultado.
+
+### Exemplo 3 — Programa Interativo Simulado
+
+```dart
+void main() {
+  List<String> nomes = ['Ana', 'Bruno', 'Carlos', 'Diana'];
+  
+  print('=== Sistema de Boas-vindas ===');
+  
+  for (String nome in nomes) {
+    print('Bem-vindo(a), $nome!');
+  }
+  
+  print('\nTotal de usuários: ${nomes.length}');
+}
+```
+
+**Arquivo sugerido:** `boas_vindas.dart`
+
+**DartPad:** Cole e clique em "Run"
+
+**Execução local:** `dart run boas_vindas.dart`
+
+**Explicação:**
+- `List<String>` cria uma lista de textos
+- `for (String nome in nomes)` percorre cada item da lista
+- `${nomes.length}` usa chaves para expressões mais complexas na interpolação
+
+**Experimente:** Adicione mais nomes à lista e veja como o total se atualiza.
+
+### Exemplo 4 — Calculadora Simples
+
+```dart
+void main() {
+  double a = 10.5;
+  double b = 3.2;
+  
+  print('=== Calculadora Básica ===');
+  print('Números: $a e $b');
+  print('Soma: ${a + b}');
+  print('Subtração: ${a - b}');
+  print('Multiplicação: ${a * b}');
+  print('Divisão: ${(a / b).toStringAsFixed(2)}');
+}
+```
+
+**Arquivo sugerido:** `calculadora_simples.dart`
+
+**DartPad:** Cole e clique em "Run"
+
+**Execução local:** `dart run calculadora_simples.dart`
+
+**Explicação:**
+- `double` armazena números com casas decimais
+- `.toStringAsFixed(2)` limita a 2 casas decimais na exibição
+- Operadores matemáticos funcionam naturalmente: `+`, `-`, `*`, `/`
+
+**Experimente:** Mude os valores de `a` e `b` para testar diferentes cálculos.
+
+### Exemplo 5 — Sistema de Notas de Estudantes
+
+```dart
+void main() {
+  Map<String, double> notas = {
+    'Maria': 8.5,
+    'João': 7.2,
+    'Ana': 9.1,
+    'Pedro': 6.8
+  };
+  
+  print('=== Sistema de Notas ===');
+  
+  double somaNotas = 0;
+  
+  for (String aluno in notas.keys) {
+    double nota = notas[aluno]!;
+    String status = nota >= 7.0 ? 'Aprovado' : 'Reprovado';
+    
+    print('$aluno: $nota - $status');
+    somaNotas += nota;
+  }
+  
+  double media = somaNotas / notas.length;
+  print('\nMédia da turma: ${media.toStringAsFixed(1)}');
+}
+```
+
+**Arquivo sugerido:** `sistema_notas.dart`
+
+**DartPad:** Cole e clique em "Run"
+
+**Execução local:** `dart run sistema_notas.dart`
+
+**Explicação:**
+- `Map<String, double>` é como um dicionário: associa nomes (String) a notas (double)
+- `notas[aluno]!` busca a nota do aluno (o `!` garante que não é nulo)
+- `condição ? valorSeVerdadeiro : valorSeFalso` é o operador ternário
+- Acumulamos a soma para calcular a média no final
+
+**Experimente:** Adicione mais estudantes ou mude as notas para ver como a média se altera.
+
+### Exemplo 6 — Gerador de Relatório Avançado
+
+```dart
+void main() {
+  List<Map<String, dynamic>> vendas = [
+    {'produto': 'Notebook', 'preco': 2500.0, 'quantidade': 2},
+    {'produto': 'Mouse', 'preco': 50.0, 'quantidade': 10},
+    {'produto': 'Teclado', 'preco': 150.0, 'quantidade': 5},
+  ];
+  
+  print('=== Relatório de Vendas ===');
+  print('${'-' * 40}');
+  
+  double totalGeral = 0;
+  
+  for (var venda in vendas) {
+    String produto = venda['produto'];
+    double preco = venda['preco'];
+    int quantidade = venda['quantidade'];
+    double subtotal = preco * quantidade;
+    
+    print('$produto:');
+    print('  Preço unitário: R\$ ${preco.toStringAsFixed(2)}');
+    print('  Quantidade: $quantidade');
+    print('  Subtotal: R\$ ${subtotal.toStringAsFixed(2)}');
+    print('${'-' * 25}');
+    
+    totalGeral += subtotal;
+  }
+  
+  print('TOTAL GERAL: R\$ ${totalGeral.toStringAsFixed(2)}');
+  
+  // Análise adicional
+  var produtoMaisCaro = vendas.reduce((a, b) => 
+    a['preco'] > b['preco'] ? a : b);
+  
+  print('\nProduto mais caro: ${produtoMaisCaro['produto']}');
+}
+```
+
+**Arquivo sugerido:** `relatorio_vendas.dart`
+
+**DartPad:** Cole e clique em "Run"
+
+**Execução local:** `dart run relatorio_vendas.dart`
+
+**Explicação:**
+- `List<Map<String, dynamic>>` é uma lista de mapas com tipos variados
+- `var` permite que Dart deduza o tipo automaticamente
+- `reduce()` é uma função que compara elementos da lista
+- Usamos formatação para criar um relatório visualmente organizado
+
+**Experimente:** Adicione mais produtos ou mude os preços para ver como o relatório se adapta.
+
+## Boas Práticas e Advertências
+
+### ✅ Faça Assim:
+- **Use nomes descritivos**: `nomeUsuario` em vez de `n`
+- **Adicione comentários**: `// Calcula a média das notas`
+- **Formate o código**: Use indentação consistente
+- **Teste no DartPad**: Sempre verifique se funciona antes de salvar
+
+### ❌ Evite Isso:
+- **Nomes genéricos**: `data`, `info`, `temp`
+- **Linhas muito longas**: Quebre em múltiplas linhas se necessário
+- **Código sem `main()`**: Não funcionará no DartPad
+- **Ignorar erros**: Se aparece em vermelho, corrija antes de continuar
+
+### Erros Comuns de Iniciantes:
+1. **Esquecer o ponto e vírgula**: Toda instrução termina com `;`
+2. **Maiúsculas e minúsculas**: `Print` não é o mesmo que `print`
+3. **Aspas não fechadas**: `'Hello World` está incompleto
+4. **Parênteses não fechados**: `print('Hello'` falta um `)`
+
+## Casos de Uso Reais
+
+### 1. Scripts de Automação
+Dart é excelente para automatizar tarefas repetitivas, como processar arquivos, gerar relatórios ou fazer backup de dados. Muitas empresas usam Dart para scripts internos.
+
+### 2. APIs e Microserviços
+Frameworks como Shelf e Aqueduct permitem criar serviços web rápidos e eficientes. Startups escolhem Dart para APIs devido à sua performance e facilidade de manutenção.
+
+### 3. Aplicações Flutter
+O caso de uso mais famoso — aplicativos móveis. Empresas como Alibaba, BMW e Google Pay usam Flutter (e consequentemente Dart) para seus apps.
+
+## Exercícios Práticos
+
+### Exercício 1
+Crie um programa que imprima seu nome, idade e cidade. Use interpolação de strings.
+
+### Exercício 2
+Faça uma calculadora que some três números diferentes e mostre o resultado.
+
+### Exercício 3
+Crie uma lista com os nomes de 5 frutas e imprima cada uma com uma mensagem de "Eu gosto de [fruta]".
+
+### Exercício 4
+Desenvolva um programa que calcule a área de um retângulo (largura × altura) e mostre o resultado formatado.
+
+### Exercício 5
+Crie um sistema que armazene informações de 3 livros (título, autor, ano) e imprima um relatório organizado.
+
+## Gabarito dos Exercícios
+
+### Resposta 1
+```dart
+void main() {
+  String nome = 'Maria Silva';
+  int idade = 28;
+  String cidade = 'São Paulo';
+  
+  print('Meu nome é $nome, tenho $idade anos e moro em $cidade.');
+}
+```
+
+### Resposta 2
+```dart
+void main() {
+  double num1 = 15.5;
+  double num2 = 8.3;
+  double num3 = 12.7;
+  
+  double resultado = num1 + num2 + num3;
+  
+  print('A soma de $num1 + $num2 + $num3 = $resultado');
+}
+```
+
+### Resposta 3
+```dart
+void main() {
+  List<String> frutas = ['Maçã', 'Banana', 'Laranja', 'Uva', 'Morango'];
+  
+  for (String fruta in frutas) {
+    print('Eu gosto de $fruta');
+  }
+}
+```
+
+### Resposta 4
+```dart
+void main() {
+  double largura = 5.5;
+  double altura = 3.2;
+  
+  double area = largura * altura;
+  
+  print('Retângulo: ${largura}m × ${altura}m');
+  print('Área: ${area.toStringAsFixed(2)} m²');
+}
+```
+
+### Resposta 5
+```dart
+void main() {
+  List<Map<String, dynamic>> livros = [
+    {'titulo': '1984', 'autor': 'George Orwell', 'ano': 1949},
+    {'titulo': 'Dom Casmurro', 'autor': 'Machado de Assis', 'ano': 1899},
+    {'titulo': 'O Alquimista', 'autor': 'Paulo Coelho', 'ano': 1988},
+  ];
+  
+  print('=== Biblioteca Pessoal ===');
+  
+  for (int i = 0; i < livros.length; i++) {
+    var livro = livros[i];
+    print('${i + 1}. ${livro['titulo']}');
+    print('   Autor: ${livro['autor']}');
+    print('   Ano: ${livro['ano']}\n');
+  }
+}
+```
+
+## Resumo
+
+1. **Dart é uma linguagem moderna** criada pelo Google, ideal para iniciantes e profissionais
+2. **DartPad é seu melhor amigo** para aprender — use https://dartpad.dev
+3. **Todo programa Dart precisa de main()** — é o ponto de partida
+4. **Interpolação com $** facilita a criação de textos dinâmicos
+5. **Tipos básicos incluem** String, int, double, bool, List e Map
+6. **Dart serve para muito mais** que Flutter — web, servidor, scripts
+7. **Practice makes perfect** — execute todos os exemplos no DartPad
+8. **Null-safety previne erros** comuns em outras linguagens
+9. **Sintaxe familiar** facilita a transição de outras linguagens
+10. **Ecossistema em crescimento** com muitas oportunidades no mercado
+
+## Glossário
+
+- **DartPad**: Editor online gratuito para escrever e executar código Dart
+- **SDK**: Software Development Kit — conjunto de ferramentas para desenvolvimento
+- **main()**: Função principal onde o programa inicia sua execução
+- **String**: Tipo de dado para texto
+- **int**: Tipo de dado para números inteiros
+- **double**: Tipo de dado para números com casas decimais
+- **List**: Coleção ordenada de elementos
+- **Map**: Coleção de pares chave-valor
+- **Interpolação**: Inserir valores de variáveis dentro de strings usando $
+- **Null-safety**: Sistema que previne erros relacionados a valores nulos
+
+## Referências
+
+1. [Dart.dev - Site Oficial](https://dart.dev)
+2. [Dart Language Tour](https://dart.dev/language)
+3. [DartPad - Editor Online](https://dartpad.dev)
+4. [Dart Packages](https://pub.dev)
+
+**Dica de estudo:** Antes de avançar, experimente modificar todos os exemplos deste capítulo no DartPad. Troque valores, adicione novos dados e observe como o programa se comporta. A prática é essencial para fixar o conhecimento!
