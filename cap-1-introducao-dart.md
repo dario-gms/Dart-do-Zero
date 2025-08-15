@@ -461,3 +461,5 @@ void main() {
 4. [Dart Packages](https://pub.dev)
 
 **Dica de estudo:** Antes de avançar, experimente modificar todos os exemplos deste capítulo no DartPad. Troque valores, adicione novos dados e observe como o programa se comporta. A prática é essencial para fixar o conhecimento!
+
+[Capítulo 2 - Variáveis, tipos primitivos, operadores, comentários, convenções de nome.](cap-2-fundamentos-sintaxe.md)
