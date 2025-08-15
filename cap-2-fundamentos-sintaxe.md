@@ -835,6 +835,6 @@ void main() {
 4. **Dart Style Guide**: https://dart.dev/effective-dart/style
 5. **DartPad - Ambiente Online**: https://dartpad.dev
 
-## Anotações Finais / Próximo Capítulo
+## Anotações Finais
 
 Agora você domina os fundamentos de variáveis, tipos primitivos e operadores em Dart. Estes conceitos são a base para tudo que construiremos adiante. Pratique bastante no DartPad modificando os exemplos - a experimentação é fundamental para fixar o aprendizado.
