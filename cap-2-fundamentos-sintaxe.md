@@ -838,3 +838,5 @@ void main() {
 ## Anotações Finais
 
 Agora você domina os fundamentos de variáveis, tipos primitivos e operadores em Dart. Estes conceitos são a base para tudo que construiremos adiante. Pratique bastante no DartPad modificando os exemplos. A experimentação é fundamental para fixar o aprendizado.
+
+[Capítulo 3 - `if`, `switch`, laços (`for`, `while`, `do-while`), `break`/`continue`.](cap-3-controle-fluxo.md)

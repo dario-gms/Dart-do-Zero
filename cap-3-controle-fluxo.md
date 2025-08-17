@@ -919,14 +919,6 @@ void main() {
 2. **Dart Language Tour - Control Flow Statements**: https://dart.dev/language/tour#control-flow-statements
 3. **Effective Dart - Style Guide**: https://dart.dev/effective-dart/style
 
-## Próximos passos
-
-Agora que você domina as estruturas de controle, está pronto para:
-
-1. **Capítulo 4**: Funções - Organizando e reutilizando código
-2. **Capítulo 5**: Listas e Maps - Trabalhando com coleções de dados  
-3. **Capítulo 6**: Classes e Objetos - Programação orientada a objetos
-
 **Recomendação de prática:** Antes de prosseguir, implemente pelo menos 3 dos exercícios propostos e experimente modificar os exemplos no DartPad. A prática com estruturas de controle é fundamental para todos os conceitos que virão a seguir.
 
 **Desafio extra:** Tente criar um programa que combine todas as estruturas aprendidas: um sistema de gerenciamento de estoque que usa if para validações, switch para categorias de produtos, for para relatórios, while para menu interativo, e break/continue para controle de fluxo!
