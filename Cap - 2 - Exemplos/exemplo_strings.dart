@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 void main() {
   // Diferentes formas de criar strings
   String nome = "Maria";

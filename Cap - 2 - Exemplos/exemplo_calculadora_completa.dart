@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_type_check
+
 void main() {
   // Simulando entrada de dados (no mundo real viria de input)
   double numero1 = 15.5;
