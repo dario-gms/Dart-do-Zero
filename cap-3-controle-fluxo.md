@@ -139,10 +139,10 @@ Quando você tem muitas condições baseadas no mesmo valor, o `switch` é mais 
 ### Exemplo 3 — Switch básico com enum
 
 ```dart
+// Definindo um enum para dias da semana
+enum DiaSemana { segunda, terca, quarta, quinta, sexta, sabado, domingo }
+
 void main() {
-  // Definindo um enum para dias da semana
-  enum DiaSemana { segunda, terca, quarta, quinta, sexta, sabado, domingo }
-  
   DiaSemana hoje = DiaSemana.sexta;
   
   // Switch clássico
