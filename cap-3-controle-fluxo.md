@@ -791,62 +791,37 @@ void main() {
 ```dart
 void main() {
   List<String> cpfs = [
-    '123.456.789-10',
-    '000.000.000-00', // CPF inválido conhecido
-    '111.111.111-11', // CPF inválido conhecido
-    '123.456.789-09',
-    'abc.def.ghi-jk', // Formato muito errado
-    '12345678901',     // Sem formatação, mas válido em tamanho
-    '',               // Vazio
-    '999.999.999-99'
+    '123.456.789-09', 
+    '987.654.321-00', 
+    '111.222.333-44', 
+    '12345678909',    
+    '123.456.789-0A', 
+    '12.3456.789-09', 
+    '000.000.000-00'  
   ];
   
-  int cpfsProcessados = 0;
-  int cpfsValidos = 0;
-  
-  print('🔍 Validando lista de CPFs...\n');
+  print('Validador de CPFs:\n');
   
   for (String cpf in cpfs) {
-    print('Verificando: "$cpf"');
-    
-    // Continue para CPFs vazios
-    if (cpf.isEmpty) {
-      print('⚠️ CPF vazio - pulando...\n');
-      continue;
+    // Verifica se o CPF tem o formato correto: XXX.XXX.XXX-XX
+    if (!RegExp(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$').hasMatch(cpf)) {
+      if (cpf.length < 14) {
+        print('CPF "$cpf" está muito errado! Encerrando validação.');
+        break; // Sai do loop se o formato estiver muito errado
+      } else {
+        print('CPF "$cpf" é inválido! Pulando para o próximo.');
+        continue; // Pula CPFs com formato incorreto
+      }
     }
     
-    // Break se encontrar CPF com caracteres não numéricos (exceto . e -)
-    String cpfLimpo = cpf.replaceAll('.', '').replaceAll('-', '');
-    if (cpfLimpo.length != 11) {
-      print('❌ CPF com tamanho incorreto');
-      continue;
+    // Simulação de validação simples (aqui apenas verificamos se não é uma sequência repetida)
+    if (RegExp(r'^(\d)\1{10}$').hasMatch(cpf.replaceAll(RegExp(r'\D'), ''))) {
+      print('CPF "$cpf" é inválido! Pulando para o próximo.');
+      continue; // Pula CPFs inválidos
     }
     
-    // Verifica se contém apenas números
-    if (!RegExp(r'^\d+).hasMatch(cpfLimpo)) {
-      print('🚨 CPF com caracteres inválidos - parando validação');
-      break;
-    }
-    
-    cpfsProcessados++;
-    
-    // Validação simples: verifica se não são todos iguais
-    if (cpfLimpo == '00000000000' || 
-        cpfLimpo == '11111111111' || 
-        cpfLimpo == '22222222222' ||
-        cpfLimpo.split('').toSet().length == 1) {
-      print('❌ CPF inválido (sequência repetida)');
-    } else {
-      print('✅ CPF com formato aparentemente válido');
-      cpfsValidos++;
-    }
-    
-    print('');
+    print('CPF "$cpf" é válido! ✅');
   }
-  
-  print('📊 Resumo:');
-  print('CPFs processados: $cpfsProcessados');
-  print('CPFs aparentemente válidos: $cpfsValidos');
 }
 ```
 
