@@ -994,45 +994,8 @@ int somarLista(List<int> numeros) {
 3. **Dart SDK Documentation**: https://api.dart.dev/stable/
 4. **DartPad Online**: https://dartpad.dev
 
-## Próximo Capítulo
-
-No **Capítulo 5**, você aprenderá sobre **Programação Orientada a Objetos em Dart**: classes, objetos, construtores, herança e polimorfismo. As funções que você dominou agora serão a base para criar métodos dentro das classes!
-
 **Preparação recomendada:**
 - Pratique todos os exercícios deste capítulo
 - Experimente criar suas próprias funções no DartPad
 - Tente combinar diferentes tipos de parâmetros em uma única função
 - Explore o uso de closures para manter estado em pequenos projetos 1
-
-```dart
-void main() {
-  print(calcularIMC(peso: 70.0, altura: 1.75));
-  print(calcularIMC(peso: 85.0, altura: 1.80));
-  
-  // Teste com valores inválidos
-  try {
-    print(calcularIMC(peso: -5.0, altura: 1.75));
-  } catch (e) {
-    print('Erro: $e');
-  }
-}
-
-String calcularIMC({required double peso, required double altura}) {
-  // Validação de entrada
-  if (peso <= 0) throw ArgumentError('Peso deve ser positivo');
-  if (altura <= 0) throw ArgumentError('Altura deve ser positiva');
-  
-  double imc = peso / (altura * altura);
-  
-  String classificacao = imc < 18.5 ? 'Abaixo do peso' :
-                        imc < 25.0 ? 'Peso normal' :
-                        imc < 30.0 ? 'Sobrepeso' : 'Obesidade';
-  
-  return 'IMC: ${imc.toStringAsFixed(2)} - $classificacao';
-}
-```
-
-**Arquivo:** `gabarito_exercicio_1.dart`  
-**DartPad:** Cole e clique em Run
-
-### Gabarito Exercício
