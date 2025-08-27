@@ -1,0 +1,54 @@
+void main() {
+  // Usando parâmetros nomeados - ordem não importa
+  String perfil1 = criarPerfil(
+    nome: 'Ana',
+    idade: 30,
+    profissao: 'Desenvolvedora',
+    cidade: 'São Paulo'
+  );
+  
+  String perfil2 = criarPerfil(
+    profissao: 'Designer',
+    nome: 'Carlos', 
+    cidade: 'Rio de Janeiro',
+    idade: 28
+  );
+  
+  print(perfil1);
+  print('---');
+  print(perfil2);
+  
+  // Configurando uma conexão
+  configurarConexao(
+    host: 'localhost',
+    porta: 8080,
+    ssl: true,
+    timeout: 5000
+  );
+}
+
+String criarPerfil({
+  required String nome,
+  required int idade,
+  required String profissao,
+  required String cidade
+}) {
+  return '''
+Perfil do Usuário:
+- Nome: $nome
+- Idade: $idade anos
+- Profissão: $profissao
+- Cidade: $cidade
+''';
+}
+
+void configurarConexao({
+  required String host,
+  required int porta,
+  bool ssl = false,
+  int timeout = 3000
+}) {
+  print('Conectando em $host:$porta');
+  print('SSL: ${ssl ? "Ativado" : "Desativado"}');
+  print('Timeout: ${timeout}ms');
+}
