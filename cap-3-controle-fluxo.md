@@ -897,3 +897,5 @@ void main() {
 **Recomendação de prática:** Antes de prosseguir, implemente pelo menos 3 dos exercícios propostos e experimente modificar os exemplos no DartPad. A prática com estruturas de controle é fundamental para todos os conceitos que virão a seguir.
 
 **Desafio extra:** Tente criar um programa que combine todas as estruturas aprendidas: um sistema de gerenciamento de estoque que usa if para validações, switch para categorias de produtos, for para relatórios, while para menu interativo, e break/continue para controle de fluxo!
+
+[Declaração de funções, parâmetros nomeados/posicionais, closures, arrow functions.](cap-4-funcoes-e-expressions.md)
