@@ -31,9 +31,6 @@
 - [Casos de Uso Reais](#casos-de-uso-reais)
 - [Exercícios Práticos](#exercícios-práticos)
 - [Resumo / Takeaways](#resumo--takeaways)
-- [Glossário](#glossário)
-- [Referências](#referências)
-- [Próximos Passos](#próximos-passos)
 
 ## Introdução às Coleções
 
