@@ -31,6 +31,8 @@
 - [Casos de Uso Reais](#casos-de-uso-reais)
 - [Exercícios Práticos](#exercícios-práticos)
 - [Resumo / Takeaways](#resumo--takeaways)
+- [Glossário](#glossário)
+- [Referências](#referências)
 
 ## Introdução às Coleções
 
@@ -1304,3 +1306,79 @@ String formatarMoedaCurto(double valor) {
 8. Sempre declare tipos específicos para melhor performance e clareza
 9. Compare números decimais com tolerância, não com igualdade direta
 10. Métodos como `where()`, `map()`, `forEach()` facilitam operações em coleções
+
+## Glossário
+
+**API (Application Programming Interface)** - Interface de programação de aplicações que define como diferentes softwares podem se comunicar.
+
+**Cascade Notation (..)** - Sintaxe do Dart que permite chamar múltiplos métodos ou definir propriedades em um objeto em sequência.
+
+**CLI (Command Line Interface)** - Interface de linha de comando para interagir com programas através de texto.
+
+**Coleção** - Estrutura de dados que permite armazenar múltiplos valores em uma única variável.
+
+**DartPad** - Editor online oficial do Dart para testar código rapidamente no navegador.
+
+**Elemento** - Item individual armazenado dentro de uma coleção.
+
+**Flutter** - Framework do Google para desenvolvimento de aplicações multiplataforma usando Dart.
+
+**Função Higher-Order** - Função que recebe outras funções como parâmetros ou retorna funções.
+
+**Hot Reload** - Funcionalidade que permite ver mudanças no código instantaneamente durante o desenvolvimento.
+
+**Imutável** - Propriedade de objetos que não podem ser modificados após sua criação.
+
+**Índice** - Posição numérica de um elemento em uma lista, começando do 0.
+
+**Interpolação de String** - Técnica para inserir valores de variáveis dentro de strings usando `$variavel` ou `${expressão}`.
+
+**Iterable** - Interface que define objetos que podem ser percorridos sequencialmente.
+
+**JSON (JavaScript Object Notation)** - Formato de dados baseado em texto para intercâmbio de informações.
+
+**Literal** - Valor escrito diretamente no código, como `'texto'` ou `42`.
+
+**ListView** - Widget do Flutter para exibir listas roláveis de elementos.
+
+**Map Entry** - Par chave-valor individual dentro de um Map.
+
+**Null-safety** - Sistema do Dart que previne erros relacionados a valores nulos.
+
+**Operador Ternário** - Operador condicional `condição ? valorSeVerdadeiro : valorSeFalso`.
+
+**Parsing** - Processo de análise e conversão de dados de um formato para outro.
+
+**Regex (Regular Expression)** - Padrão de texto usado para busca e manipulação de strings.
+
+**Runtime Type** - Tipo real de um objeto durante a execução do programa.
+
+**Type Safety** - Característica que garante que variáveis só aceitem valores do tipo correto.
+
+**Widget** - Elemento básico de construção de interfaces no Flutter.
+
+## Referências
+
+### Documentação Oficial
+
+**Dart Language Tour**  
+https://dart.dev/guides/language/language-tour  
+Guia oficial completo da linguagem Dart com todos os conceitos fundamentais.
+
+**Dart API Documentation**  
+https://api.dart.dev/stable/  
+Documentação detalhada de todas as classes e métodos da biblioteca padrão do Dart.
+
+**Collections in Dart**  
+https://dart.dev/guides/libraries/library-tour#collections  
+Documentação específica sobre coleções (List, Map, Set) na biblioteca padrão.
+
+**Effective Dart**  
+https://dart.dev/guides/language/effective-dart  
+Guia de boas práticas e estilo de código recomendado pela equipe do Dart.
+
+
+
+
+
+
